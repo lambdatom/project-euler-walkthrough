@@ -46,6 +46,7 @@ class Problem:
         print(self.title)
         print(self.problem_html)
 
+
 if __name__ == "__main__":
     p1 = Problem(1)
     p1.fetch_info()
