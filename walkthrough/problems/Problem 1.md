@@ -14,8 +14,16 @@ Roughly,
 ( 3(m+1+m+2...)+5(1) )(n+n+1+n+2...+m)
 
 #### Solution
+
+For each natural number from 0 to 1000, we: 
+
+1. Multiply the number by 3 and ensure that the product is still less than 1000. 
+2. If the product is less than 1000, we add it to the sum 
+3. Next, to address multiples of 5, we repeat the process: 
+4. For each natural number from 0 to 1000, multiply the number by 5 and ensure the product is less than 1000
+5. If the product is less than 1000, we add it to the sum
+
 #### Answer
 <details><summary>Spoiler warning</summary>$ANSWER</details>
-
 
 #### Tags
