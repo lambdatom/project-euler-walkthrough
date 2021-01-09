@@ -1,18 +1,11 @@
-def solve(): 
-  sum = 0 
-  
-  for i in range(1000):
-    mltp = 3*i 
-    if ( mltp < 1000 ):
-      sum += mltp
+def solve():
 
-  for i in range(1000):
-    mltp = 5*i
-    if ( mltp < 1000 and mltp % 3 != 0 ):
-      sum += mltp
+    s3 = sum(3*i for i in range(1000) if (3*i < 1000))
+    s5 = sum(5*i for i in range(1000) if (5*i < 1000 and 5*i % 3 != 0))  # Skip values already counted by 3*i
+    s = s3 + s5
 
-  print(sum)
+    print(s)
 
 
 if __name__ == "__main__":
-  solve()
+    solve()
