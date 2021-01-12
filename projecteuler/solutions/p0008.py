@@ -1,8 +1,5 @@
-###### Largest product in a series
-<div class="problem_content" role="problem">
-<p>The four adjacent digits in the 1000-digit number that have the greatest product are 9 &#215; 9 &#215; 8 &#215; 9 = 5832.</p>
-<p class="monospace center">
-73167176531330624919225119674426574742355349194934
+
+NUMBER = """73167176531330624919225119674426574742355349194934
 96983520312774506326239578318016984801869478851843
 85861560789112949495459501737958331952853208805511
 12540698747158523863050715693290963295227443043557
@@ -21,6 +18,28 @@
 07198403850962455444362981230987879927244284909188
 84580156166097919133875499200524063689912560717606
 05886116467109405077541002256983155200055935729725
-71636269561882670428252483600823257530420752963450</p>
-<p>Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?</p>
-</div>
+71636269561882670428252483600823257530420752963450""".replace("\n", "")  # Avoiding manual alteration of the input
+
+
+def naive():
+    adj_length = 13
+    largest_product = 0
+
+    for i in range(len(NUMBER) - adj_length + 1):
+        adj_digits = NUMBER[i:i+adj_length]
+        adj_product = 1
+        for d in adj_digits:
+            adj_product *= int(d)
+
+        if adj_product >= largest_product:
+            largest_product = adj_product
+
+    return largest_product
+
+
+def solve():
+    return naive()
+
+
+if __name__ == "__main__":
+    print(solve())
