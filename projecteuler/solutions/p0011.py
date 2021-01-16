@@ -1,5 +1,4 @@
 import math
-import logging
 
 GRID = [
     [  8,  2, 22, 97, 38, 15,  0, 40,  0, 75,  4,  5,  7, 78, 52, 12, 50, 77, 91,  8 ],
@@ -29,7 +28,6 @@ def naive():
 
     grid_width = 20
     grid_height = 20
-    # grid_length = grid_width * grid_height
     adj_length = 4
 
     p_max = 0
