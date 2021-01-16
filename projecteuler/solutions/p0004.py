@@ -31,7 +31,6 @@ def naive():
     for i in palindromes:
         f = get_largest_ndigit_factor(i, len(str(n1)))
         if f != 1:
-            print(f, int(i / f), i)
             return i
 
     return 1
