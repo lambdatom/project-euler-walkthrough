@@ -38,8 +38,8 @@ def naive():
 
 
 def solve():
-    return is_palindromic(9008)
+    return naive()
 
 
 if __name__ == "__main__":
-    print(naive())
+    print(solve())
