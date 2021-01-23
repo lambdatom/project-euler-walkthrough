@@ -141,3 +141,4 @@ cython_debug/
 
 # Ignore obsidian vault / config files
 .obsidian
+.trash
