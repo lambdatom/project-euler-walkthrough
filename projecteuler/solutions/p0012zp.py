@@ -18,6 +18,7 @@ def get_divisors(x):
     return len(divisors)
 
 def get_triangle_numbers(target_factor_count): 
+    # Iterate from 1 to 1000000 finding trangle numbers
     for x in range(1, 1000000): 
         triangle_number = int((x * (x + 1)) / 2)
         num_factors = get_divisors(triangle_number)
