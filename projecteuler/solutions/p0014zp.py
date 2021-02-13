@@ -12,15 +12,13 @@ def collatz_sequence(n):
             next_item = int(i/2)
             sequence.append(next_item)
         else: 
-                    next_item = (i*3) + 1 
+            next_item = (i*3) + 1 
             sequence.append(next_item)
         i = next_item
     return sequence
 
 def solve(): 
-    for i in range(1, 1000000): 
-
-    return collatz_sequence(13)
+    return collatz_sequence(15)
 
 if __name__ == "__main__": 
     print(solve())
