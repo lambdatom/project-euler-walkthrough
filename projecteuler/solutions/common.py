@@ -1,5 +1,6 @@
 import math
 import itertools
+from functools import cache
 
 
 def is_positive_integer(n):
@@ -7,27 +8,19 @@ def is_positive_integer(n):
     return n > 0 and isinstance(n, int)
 
 
+@cache
 def fibonacci(n: int):
     """
     Return the nth Fibonacci number.
 
     See: https://mathworld.wolfram.com/FibonacciNumber.html
     """
-    assert is_positive_integer(n)
+    assert n >= 0 and isinstance(n, int)
 
-    if n == 0:
-        return 0
+    if n == 0 or n == 1:
+        return n
     else:
-        fn2 = 0  # Fib(n-2)
-        fn1 = 1  # Fib(n-1)
-        fn = 1
-
-        for i in range(1, n):
-            fn = fn1 + fn2
-            fn2 = fn1
-            fn1 = fn
-
-        return fn
+        return fibonacci(n-1) + fibonacci(n-2)
 
 
 def prime_factors(n: int):
